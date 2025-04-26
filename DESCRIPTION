@@ -1,0 +1,24 @@
+Package: inspector
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Joe", "Lara", , "jlara@uw.edu", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports:
+    dplyr,
+    magrittr,
+    tidyselect,
+    tidyr,
+    readr,
+    stringr,
+    purrr,
+    tibble,
+    lubridate,
+    usethis
