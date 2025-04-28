@@ -22,3 +22,7 @@ Imports:
     tibble,
     lubridate,
     usethis
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

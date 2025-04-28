@@ -1,0 +1,57 @@
+---
+title: "Configuração Inicial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{configuracao-inicial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Criar Novo Projecto
+
+Começaremos o nosso trabalho de configuração criando um novo projecto RStudio específico para a tarefa de processamento de dados de supervisão. Um projecto cria um ambiente de trabalho autónomo e consistente que ajuda a gerir eficazmente os caminhos dos ficheiros, as dependências e o controlo de versões. Para criar um novo projeto RStudio...
+
+-   Abra o RStudio e selecione Ficheiro \> Novo Projecto no menu principal
+
+-   Na caixa de diálogo do Assistente, selecione "Novo Directório"
+
+-   Escolha "Novo Projeto" como o tipo de projeto para uma configuração básica
+
+-   Especifique um nome para o seu projeto e escolha a localização no seu computador
+
+-   Clique em "Criar Projecto"
+
+O RStudio irá gerar a nova estrutura de projeto, criar um ficheiro .Rproj e abrir automaticamente o seu novo ambiente de projeto, pronto para começar a trabalhar.
+
+## Estabelecer Hierarquia de Pastas
+
+Ao configurar um novo projeto RStudio, é útil criar imediatamente uma hierarquia de pastas padrão onde colocará os seus scripts, dados de origem, dados de saída e outros documentos de projeto normalmente utilizados. Podemos usar o pacote `glamr` para automatizar essa configuração. Vamos primeiro carregar este pacote e depois vamos chamar a função `folder_setup`. Depois de executar o código abaixo notará que o RStudio devolverá uma mensagem indicando os nomes das novas pastas criadas dentro do repositório do seu projecto.
+
+```{r, warning = FALSE}
+# Se ainda não estiver instalado, execute o seguinte para instalar o glamr
+# install.packages('glamr', repos = c('https://usaid-oha-si.r-universe.dev', 'https://cloud.r-project.org'))
+
+# carregar pacote glamr
+library(glamr)
+
+# criar hierarquia de pastas 
+folder_setup()
+```
+
+## Configurar o Gitignore
+
+Antes de começar com o objectivo final do projeto, é também uma boa prática garantir que é configurado um ficheiro .gitignore que assegura que não são carregados dados sensíveis para ferramentas de colaboração baseadas na Web, como o GitHub. O pacote `glamr` inclui uma função chamada `setup_gitignore` que automatiza essa configuração. Depois de executar o código abaixo, notará que um novo documento chamado .gitignore foi criado na pasta do seu repositório. Pode abrir este ficheiro no bloco de notas para ver o conteúdo da pasta e os tipos de ficheiros que não serão enviados para a Web se optar por começar a utilizar o GitHub mais tarde.
+
+```{r, warning = FALSE}
+# criar .gitignore
+setup_gitignore()
+```
+
+Parabéns! Já finalizou a configuração do projeto, assegurando que o seu código está optimizado para a reprodutibilidade e que existem protecções para evitar qualquer possível partilha não intencional de dados.
