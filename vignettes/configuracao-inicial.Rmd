@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 ## Criar Novo Projecto
 
-Começaremos o nosso trabalho de configuração criando um novo projecto RStudio específico para a tarefa de processamento de dados de supervisão. Um projecto cria um ambiente de trabalho autónomo e consistente que ajuda a gerir eficazmente os caminhos dos ficheiros, as dependências e o controlo de versões. Para criar um novo projeto RStudio...
+Começaremos o nosso trabalho de configuração criando um novo projecto RStudio específico para a tarefa de processamento de dados de supervisão. Um projecto cria um ambiente de trabalho autónomo e consistente que ajuda a gerir eficazmente os caminhos dos ficheiros, as dependências e o controlo de versões. Para criar um novo projecto RStudio...
 
 -   Abra o RStudio e selecione Ficheiro \> Novo Projecto no menu principal
 

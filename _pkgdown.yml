@@ -30,4 +30,4 @@ navbar:
       text: Artigos
       menu:
       - text: Configuração Inicial do Projecto
-        href: articles/configuracao_inicial.html
+        href: articles/configuracao-inicial.html
