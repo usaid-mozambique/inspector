@@ -7,16 +7,16 @@ Chamar e puxar dados de supervisão
 
 ## Resumo
 
-A análise eficiente de dados exportados dos sistemas de informação do MISAU tipicamente requer acções de processamento tais como pivotagem, eliminação/coerção de variáveis e engenharia de dimensões úteis para a análise. O pacote sismar fornece um conjunto de funções que executam essas acções e preparam quadros para análise no R ou em software analítico alternativo.
+O pacote inspetor foi criado para automatizar a busca de ficheiros de dados de supervisão a partir do servidor ODK e para compilar e transformar estes dados em ficheiros de fácil análise.
 
 
 ## Instalação
 
-`sismar` não está no CRAN e precisa ser instalado diretamente do rOpenSci usando o código abaixo.
+`inspector` não está no CRAN e precisa ser instalado diretamente do rOpenSci usando o código abaixo.
 
 ``` r
     # instalar a partir de rOpenSci
-      install.packages("sismar", repos = c('https://usaid-mozambique.r-universe.dev', 'https://cloud.r-project.org'))
+      install.packages("inspector", repos = c('https://usaid-mozambique.r-universe.dev', 'https://cloud.r-project.org'))
     
     # carregar pacote
       library(inspector)
