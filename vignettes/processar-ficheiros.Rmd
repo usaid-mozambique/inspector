@@ -1,0 +1,78 @@
+---
+title: "Processar Ficheiros"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{processar-ficheiros}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Carregar os pacotes
+
+Se ainda não o fez, abra uma nova sessão de trabalho no RStudio.  Como sempre, começaremos o nosso trabalho criando um novo script R (File -> New File -> R script).  Também vamos carregar os principais pacotes R necessários para o trabalho. O Tidyverse é o nosso fiel e polivalente “canivete suíço” de programação de ciência de dados em R. O pacote sismar permite-nos arrumar os dados exportados dos sistemas de informação de saúde do MISAU, incluindo o DISA. O pacote glue permite-nos combinar e utilizar valores de cadeia de caracteres no código.
+
+
+```{r setup, eval = FALSE, echo = TRUE}
+library(tidyverse)
+library(arrow)
+library(glue)
+library(inspector)
+```
+
+## Guardar ficheiros de supervisão 
+
+Antes de escrever qualquer código, certifique-se de que todos os ficheiros de dados brutos de supervisão csv estão guardados na pasta “Data” do repositório do seu projeto.  Isto facilitará o acesso aos mesmos e manterá os vários documentos do projeto organizados.  
+
+## Criar valores e listas para  uso posterior
+
+Vamos agora criar um valor que se refere à data atual que será utilizada quando começarmos a guardar os nossos ficheiros finais processados.  Também vamos criar um valor que aponta para a pasta na qual os nossos dados em bruto estão armazenados.  Finalmente, vamos criar uma lista dos caminhos de todo o conjunto de ficheiros csv armazenados na pasta “Data” do nosso repositório.
+
+```{r eval = FALSE, echo = TRUE}
+# criar carimbo de data
+date <- as.integer(format(now(), "%Y%m%d"))
+
+# criar caminho aos dados brutos
+path_repo_input <- "Data/"
+
+# criar vector dos caminhos dos dados brutos
+path_inputs <-
+    list.files(path_repo_input, 
+               pattern = ".csv", 
+               full.names = TRUE)
+```
+
+## Processar ficheiros brutos
+
+Por fim, vamos chamar as funções `inspetor` para começar a processar os nossos dados de supervisão.  O Inspetor oferece-nos duas funções que podemos utilizar em conjunto para 1) identificar erros de processamento; e 2) realizar o processamento de forma iterativa em vários ficheiros de entrada (particularmente útil uma vez que existem 49 formulários csv gerados para as actividades de supervisão).
+
+O primeiro trecho de código abaixo que usa `map` e `process_sqi_files` criará nosso relatório de erros, enquanto o segundo trecho de código, quando fornecido um argumento com o valor do nosso caminho apontando para os dados de entrada, retornará uma tabela compilada de dados pronta para análise.
+
+```{r eval = FALSE, echo = TRUE}
+df_safe <- purrr::map(path_inputs, 
+                      ~ process_sqi_file(.x, safe = TRUE))
+
+df <- process_sqi_batch(path_inputs)
+
+
+```
+
+## Gravar ficheiro final no disco local
+
+Como último passo, guardaremos os nossos dados processados na pasta “Dataout” do nosso projeto, onde poderemos aceder aos mesmos para análise em R ou noutras ferramentas de análise como o PowerBI ou o Tableau.  Abaixo, usamos um formato de arquivo compactado comum chamado ‘parquet’, que normalmente salva arquivos que têm apenas 3% do tamanho de um formato csv ou txt. Note-se também que o nome do ficheiro parquet gravado no disco rígido local inclui a data em que o código acima foi executado!  Isto significa que terá um conjunto organizado de ficheiros facilmente reconhecíveis que lhe permitem ver como os dados mudam ao longo do tempo!
+
+```{r eval = FALSE, echo = TRUE}
+write_parquet(df, glue('Dataout/sqi_{date}.parquet'))
+```
+
+Parabéns!  Você, processou e exportou com sucesso um ficheiro de dados de supervisão fácil de utilizar e organizado para utilização em análises!
+
+------------------------------------------------------------------------
+
+*Disclaimer: The findings, interpretation, and conclusions expressed herein are those of the authors and do not necessarily reflect the views of United States Agency for International Development. All errors remain our own.*
