@@ -2,3 +2,4 @@
 
 export(process_sqi_batch)
 export(process_sqi_file)
+importFrom(lifecycle,deprecated)

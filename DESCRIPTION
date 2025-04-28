@@ -21,7 +21,8 @@ Imports:
     purrr,
     tibble,
     lubridate,
-    usethis
+    usethis,
+    lifecycle
 Suggests: 
     knitr,
     rmarkdown
