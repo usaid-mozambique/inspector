@@ -1,15 +1,15 @@
 url: https://usaid-mozambique.github.io/inspector/
-
 template:
   bootstrap: 5
   bslib:
-    base_font: {google: "Montserrat"}
-    heading_font: {google: "Lato"}
-    code_font: {google: "Source Code Pro"}
-    primary: "#306cc9"
-
+    base_font:
+      google: Montserrat
+    heading_font:
+      google: Lato
+    code_font:
+      google: Source Code Pro
+    primary: '#306cc9'
 lang: pt
-
 navbar:
   structure:
     left:
@@ -21,7 +21,6 @@ navbar:
     right:
     - search
     - github
-
   components:
     home:
       icon: fas fa-home fa-lg
@@ -31,3 +30,4 @@ navbar:
       menu:
       - text: Configuração Inicial do Projecto
         href: articles/configuracao-inicial.html
+
