@@ -1,0 +1,33 @@
+url: ~
+
+template:
+  bootstrap: 5
+  bslib:
+    base_font: {google: "Montserrat"}
+    heading_font: {google: "Lato"}
+    code_font: {google: "Source Code Pro"}
+    primary: "#306cc9"
+
+lang: pt
+
+navbar:
+  structure:
+    left:
+    - home
+    - reference
+    - articles
+    - outro
+    - news
+    right:
+    - search
+    - github
+
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    articles:
+      text: Artigos
+      menu:
+      - text: Configuração Inicial do Projecto
+        href: articles/configuracao_inicial.html
