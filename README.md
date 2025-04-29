@@ -1,4 +1,4 @@
-# inspector
+# inspector <a href="https://usaid-mozambique.github.io/inspector/"><img src="man/figures/logo.png" align="right" height="175" alt="inspector website"/>
 
 Chamar e puxar dados de supervisão
 
@@ -11,7 +11,6 @@ Chamar e puxar dados de supervisão
 ## Resumo
 
 O pacote inspetor foi criado para automatizar a busca de ficheiros de dados de supervisão a partir do servidor ODK e para compilar e transformar estes dados em ficheiros de fácil análise.
-
 
 ## Instalação
 
@@ -29,6 +28,6 @@ O pacote inspetor foi criado para automatizar a busca de ficheiros de dados de s
     
 ```
 
----
+------------------------------------------------------------------------
 
 *Disclaimer: The findings, interpretation, and conclusions expressed herein are those of the authors and do not necessarily reflect the views of United States Agency for International Development. All errors remain our own.*
