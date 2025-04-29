@@ -30,4 +30,6 @@ navbar:
       menu:
       - text: Configuração Inicial do Projecto
         href: articles/configuracao-inicial.html
+      - text: Processar Ficheiros de Supervisão
+        href: articles/processar-ficheiros.html
 

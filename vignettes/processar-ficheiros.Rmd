@@ -16,8 +16,7 @@ knitr::opts_chunk$set(
 
 ## Carregar os pacotes
 
-Se ainda não o fez, abra uma nova sessão de trabalho no RStudio.  Como sempre, começaremos o nosso trabalho criando um novo script R (File -> New File -> R script).  Também vamos carregar os principais pacotes R necessários para o trabalho. O Tidyverse é o nosso fiel e polivalente “canivete suíço” de programação de ciência de dados em R. O pacote sismar permite-nos arrumar os dados exportados dos sistemas de informação de saúde do MISAU, incluindo o DISA. O pacote glue permite-nos combinar e utilizar valores de cadeia de caracteres no código.
-
+Se ainda não o fez, abra uma nova sessão de trabalho no RStudio.  Como sempre, começaremos o nosso trabalho criando um novo script R (File -> New File -> R script).  Também vamos carregar os principais pacotes R necessários para o trabalho.
 
 ```{r setup, eval = FALSE, echo = TRUE}
 library(tidyverse)

@@ -3,7 +3,6 @@
 Chamar e puxar dados de supervisão
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/usaid-mozambique/inspector/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/usaid-mozambique/inspector/actions/workflows/R-CMD-check.yaml)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![sismar status badge](https://usaid-mozambique.r-universe.dev/badges/sismar)](https://usaid-mozambique.r-universe.dev/sismar)
 [![:name status badge](https://usaid-mozambique.r-universe.dev/badges/:name)](https://usaid-mozambique.r-universe.dev/)
