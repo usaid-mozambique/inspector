@@ -1,5 +1,5 @@
 Package: inspector
-Title: What the Package Does (One Line, Title Case)
+Title: Chamar e puxar dados de supervisão
 Version: 0.0.0.9000
 Authors@R: 
     person("Joe", "Lara", , "jlara@uw.edu", role = c("aut", "cre"))

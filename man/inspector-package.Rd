@@ -4,7 +4,7 @@
 \name{inspector-package}
 \alias{inspector}
 \alias{inspector-package}
-\title{inspector: What the Package Does (One Line, Title Case)}
+\title{inspector: Chamar e puxar dados de supervisão}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 

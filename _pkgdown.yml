@@ -32,4 +32,11 @@ navbar:
         href: articles/configuracao-inicial.html
       - text: Processar Ficheiros de Supervisão
         href: articles/processar-ficheiros.html
-
+reference:
+- title: Processar
+- contents:
+  - process_sqi_batch
+  - process_sqi_file
+- title: Metadados
+- contents:
+  - starts_with("data_")
