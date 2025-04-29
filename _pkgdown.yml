@@ -32,6 +32,11 @@ navbar:
         href: articles/configuracao-inicial.html
       - text: Processar Ficheiros de Supervisão
         href: articles/processar-ficheiros.html
+    news:
+      - text: Changelog
+        href: news/index.html
+
+
 reference:
 - title: Processar
 - contents:
